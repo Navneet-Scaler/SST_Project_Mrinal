@@ -13,20 +13,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    role: {
-        type: String,
-        enum: ['admin', 'user', 'partner'],
-        required: true,
-        default: 'user'
-    },
-    otp: {
-        type: String
-    },
-    otpExpiry: {
-        type: Date
-    },
-}, { timestamps: true });
-
+},
+{ timestamps: true });
 const User = mongoose.model('User', userSchema);
-
 module.exports = User;
